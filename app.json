@@ -1,16 +1,29 @@
 {
   "name": "dbads",
   "description": "Tech Magician Deepak Bharti",
-  "repository": "https://github.com/dbads/djnago-portfolio",
   "keywords": ["dbads", "tech magician", "Deepak Bharti"],
+  "repository": "https://github.com/dbads/djnago-portfolio",
   "success_url":"/",
-  "env":{
-    "DISABLE_COLLECTSTATIC":"1", 
-    "SECRET_KEY": {
+  "scripts": {
+    "postdeploy": "python manage.py migrate"
+  },
+   "env": {
+    "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "5"
     }
   },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "standard-1x"
+    }
+  },
+  "image": "heroku/ruby",
   "addons":[
     {
 	    "plan":"heroku-postgresql"
