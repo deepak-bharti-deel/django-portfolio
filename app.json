@@ -8,6 +8,7 @@
     "postdeploy": "python manage.py migrate"
   },
    "env": {
+   "DISABLE_COLLECTSTATIC":"1",
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
