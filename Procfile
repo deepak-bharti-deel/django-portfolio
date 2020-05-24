@@ -1,1 +1,1 @@
-web: gunicorn ContriHub.wsgi --log-file -
+web: gunicorn dbadshome.wsgi --log-file -
