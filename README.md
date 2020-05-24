@@ -1,0 +1,2 @@
+# djnago-portfolio
+django server
