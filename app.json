@@ -1,0 +1,19 @@
+{
+  "name": "dbads",
+  "description": "Tech Magician Deepak Bharti",
+  "repository": "https://github.com/dbads/djnago-portfolio",
+  "keywords": ["dbads", "tech magician", "Deepak Bharti"],
+  "success_url":"/",
+  "env":{
+    "DISABLE_COLLECTSTATIC":"1", 
+    "SECRET_KEY": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    }
+  },
+  "addons":[
+    {
+	    "plan":"heroku-postgresql"
+    }
+  ]
+}
