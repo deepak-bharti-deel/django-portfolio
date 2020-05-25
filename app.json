@@ -5,7 +5,7 @@
   "repository": "https://github.com/dbads/djnago-portfolio",
   "success_url":"/",
   "scripts": {
-    "postdeploy": "python manage.py migrate"
+    "postdeploy": "python manage.py migrate && python manage.py collectstatic"
   },
    "env": {
    "DISABLE_COLLECTSTATIC":"1",
