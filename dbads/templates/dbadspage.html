@@ -5,8 +5,7 @@
 <head>
   <meta charset="utf-8">
   <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
-  <link rel="stylesheet" href="style.css">
-  <meta name="viewport" content="width=640, initial-scale=0.47, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="Deepak Bhart, dbads, Tech magician, MNNITian, Collegedunia">
   <meta name="author" content="Deepak Bharti(@dbads)">
 
@@ -32,74 +31,10 @@
   <meta name="twitter:site" content="@dbads">
   <meta name="twitter:creator" content="@dbads">
 
-
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   
+  <link rel="stylesheet" href="{% static 'css/dbadspage.css' %}">
   <style>
-    body {
-      background: "url({% static 'img/bg.jpg' %}) no-repeat center center fixed";
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background-size: cover;
-    }
-
-    .box {
-      width: 450px;
-      background: rgba(0, 0, 0, 0.4);
-      padding: 40px;
-      text-align: center;
-      margin: auto;
-      margin-top: 5%;
-      color: white;
-      font-family: 'Century Gothic', sans-serif;
-      border-radius: 10%;
-    }
-
-    .box-img {
-      border-radius: 50%;
-      min-width: 200px;
-      min-height: 200px;
-      max-width: 200px;
-      max-height: 200px;
-    }
-
-    .box h1 {
-      font-size: 40px;
-      letter-spacing: 4px;
-      font-weight: 100;
-    }
-
-    .box h5 {
-      font-size: 20px;
-      letter-spacing: 3px;
-      font-weight: 100;
-    }
-
-    .box p {
-      text-align: justify;
-    }
-
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    .box li {
-      display: inline-block;
-      margin: 6px;
-      list-style: none;
-    }
-
-    .box li a {
-      color: white;
-      text-decoration: none;
-      font-size: 60px;
-      transition: all ease-in-out 250ms;
-    }
-
-    .box li a:hover {
-      color: #b9b9b9;
-    }
   </style>
 </head>
 
@@ -122,7 +57,7 @@
     }
   </script>
 
-  <div class="box">
+  <div class="box col col-md-10 col-md-offset-1">
     <img src="{% static 'img/deepak_kheerganga_rock.jpeg' %}" alt="" class="box-img box_pic">
     <h1>
       Deepak Bharti <br>
@@ -157,106 +92,10 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/typeit@7.X.X/dist/typeit.min.js"></script>
+  
+  <script src="{% static 'js/dbadspage.js' %}"></script>
 
   <script>
-    $('.social_links').hover(
-      function inFunction() {
-          const classList = $(this.classList).toArray()
-          if (this.classList.contains('twitter')) {
-            $('body').css({
-              'background': "url({% static 'img/twitter_profile_bg.jpg' %}) no-repeat center center fixed",
-              'height': '100%',
-              'margin': 0,
-              'padding': 0,
-              'width': '100%', 
-              'height': '100%',
-              'background-size': 'cover',
-            })
-            $('.box_pic').prop('src', "{% static 'img/deepak_jimcorbet.jpg' %}")
-          } else if (classList.includes('linkedin')) {
-            $('body').css({
-              'background': "url({% static 'img/linkedin_profile_bg.jpg' %}) no-repeat center center fixed",
-              'height': '100%',
-              'margin': 0,
-              'padding': 0,
-              'width': '100%', 
-              'height': '100%',
-              'background-size': 'cover',
-            })
-            $('.box_pic').prop('src', "{% static 'img/deepak_lucknow.jpg' %}")
-          } else if (classList.includes('github')) {
-            $('body').css({
-              'background': "url({% static 'img/github_profile_bg.jpg' %}) no-repeat center center fixed",
-              'height': '100%',
-              'margin': 0,
-              'padding': 0,
-              'width': '100%', 
-              'height': '100%',
-              'background-size': 'cover',
-            })
-            $('.box_pic').prop('src', "{% static 'img/deepak_kheerganga_rock.jpeg' %}")
-          } else if (classList.includes('quora')) {
-            $('body').css({
-              'background': "url({% static 'img/quora_profile_bg.jpg' %}) no-repeat center center fixed",
-              'height': '100%',
-              'margin': 0,
-              'padding': 0,
-              'width': '100%', 
-              'height': '100%',
-              'background-size': 'cover',
-            })
-            $('.box_pic').prop('src', "{% static 'img/deepak_lucknow_2.jpg' %}")
-          } else if (classList.includes('resume')) {
-            $('body').css({
-              'background': "url({% static 'img/deepak_resume.jpg' %}) no-repeat center center fixed",
-              'height': '100%',
-              'margin': 0,
-              'padding': 0,
-              'width': '100%', 
-              'height': '100%',
-              'background-size': 'cover',
-            })
-            $('.box_pic').prop('src', "{% static 'img/deepak.jpeg' %}")
-          }
-      },
-      function outFunction(){  
-        // setting back to default background image
-        $('body').css({
-          'margin': 0,
-          'padding': 0,
-          'background': 'url(bg.jpg) no-repeat center center fixed',
-          'height': '100%',
-          'background-size': 'cover',
-        })
-        $('.box_pic').prop('src', "{% static 'img/deepak_kheerganga_rock.jpeg' %}")
-      }
-    )
-
-    let boxPicChangeGlobal
-    $('.box_pic').hover(
-      function inFunction() {
-        const images = [
-        "{% static 'img/deepak_jimcorbet.jpg' %}",
-        "{% static 'img/deepak_lucknow.jpg' %}",
-        "{% static 'img/deepak_kheerganga_rock.jpeg' %}",
-        "{% static 'img/deepak_lucknow_2.jpg' %}",
-        "{% static 'img/deepak_csed.jpg' %}",
-         ]
-        let boxPicChange = setInterval(function(){
-          const time = Date.now()
-          $('.box_pic').prop('src', images[time % images.length])
-        }, 800)
-        boxPicChangeGlobal = boxPicChange
-      },
-      function outFunction() {
-        clearInterval(boxPicChangeGlobal)
-        $('.box_pic').prop('src', "{% static 'img/deepak_kheerganga_rock.jpeg' %}")
-      }
-    )
-    
-    new TypeIt('.dbads', {
-      strings: "(dbads)"
-    }).go();
   </script>
 </body>
 </html>
