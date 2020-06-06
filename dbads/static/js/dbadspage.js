@@ -63,7 +63,7 @@
       $('body').css({
         'margin': 0,
         'padding': 0,
-        'background': 'url(bg.jpg) no-repeat center center fixed',
+        'background': "url('/static/img/bg.jpg') no-repeat center center fixed",
         'height': '100%',
         'background-size': 'cover',
       })
