@@ -1,7 +1,7 @@
 body {
-  background: url("/static/img/bg.jpg") no-repeat center center fixed;
+  background: url("/static/img/bg.4a7d9007b984.jpg") no-repeat center center fixed;
   height: 100%;
-  margin: 0;
+  margin: 20;
   padding: 0;
   background-size: cover;
 }
@@ -11,8 +11,8 @@ body {
   background: rgba(0, 0, 0, 0.4);
   padding: 40px;
   text-align: center;
-  margin: 10%;
-  /* margin-top: 5%; */
+  margin: auto;
+  margin-top: 5%;
   color: white;
   font-family: 'Century Gothic', sans-serif;
   border-radius: 10%;
