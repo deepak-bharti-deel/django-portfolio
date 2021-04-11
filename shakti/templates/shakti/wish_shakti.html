@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy birthday Shakti</title>
+  <link rel="stylesheet" href="{% static 'shakti/wish_shakti.css' %}">
+</head>
+<body>
+    <div class="header">
+      <h1>Happy birthday shakti</h1>
+    </div>
+
+    <div class="main-container">
+      <div class="image-section">
+      {% for image_url in image_urls %}
+        <div class="single-image">
+          <img src="{{image_url}}" alt="shakti">
+        </div>
+      {% endfor %}
+      </div>
+      <div class="video-section">
+      {% for video_url in video_urls %}
+        <div class="single-video">
+          <iframe src="{{video_url}}" width="640" height="480"></iframe>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+</body>
+</html>
