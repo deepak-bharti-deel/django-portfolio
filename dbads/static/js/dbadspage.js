@@ -75,11 +75,11 @@
   $('.box_pic').hover(
     function inFunction() {
       const images = [
+      "/static/img/ptt_1.png",
+      "/static/img/boat_1.jpeg",
+      "/static/img/bkk_1.jpeg",
+      "/static/img/dll_1.jpeg",
       "/static/img/deepak_jimcorbet.jpg",
-      "/static/img/deepak_lucknow.jpg",
-      "/static/img/deepak_kheerganga_rock.jpeg",
-      "/static/img/deepak_lucknow_2.jpg",
-      "/static/img/deepak_csed.jpg",
         ]
       let boxPicChange = setInterval(function(){
         const time = Date.now()
