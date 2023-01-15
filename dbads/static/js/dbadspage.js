@@ -63,11 +63,11 @@
       $('body').css({
         'margin': 0,
         'padding': 0,
-        'background': "url('/static/img/bg.jpg') no-repeat center center fixed",
+        'background': "url('/static/img/bg_2.jpg') no-repeat center center fixed",
         'height': '100%',
         'background-size': 'cover',
       })
-      $('.box_pic').prop('src', "/static/img/deepak_kheerganga_rock.jpeg")
+      $('.box_pic').prop('src', "/static/img/ptt_1.png")
     }
   )
 
@@ -89,7 +89,7 @@
     },
     function outFunction() {
       clearInterval(boxPicChangeGlobal)
-      $('.box_pic').prop('src', "/static/img/deepak_kheerganga_rock.jpeg")
+      $('.box_pic').prop('src', "/static/img/ptt_1.png")
     }
   )
   
