@@ -1,6 +1,6 @@
   $('.social_links').hover(
     function inFunction() {
-        const classList = []//$(this.classList).toArray()
+        const classList = []; //$(this.classList).toArray()
         if (this.classList.contains('twitter')) {
           $('body').css({
             'background': "url('/static/img/twitter_profile_bg.jpg') no-repeat center center fixed",
