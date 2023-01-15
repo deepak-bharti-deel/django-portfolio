@@ -1,6 +1,7 @@
-  $('.social_links').hover(
+  $('.social_links_wrong_class').hover(
+  // $('.social_links').hover(
     function inFunction() {
-        const classList = []; //$(this.classList).toArray()
+        const classList = $(this.classList).toArray()
         if (this.classList.contains('twitter')) {
           $('body').css({
             'background': "url('/static/img/twitter_profile_bg.jpg') no-repeat center center fixed",
@@ -79,7 +80,7 @@
       "/static/img/boat_1.jpeg",
       "/static/img/bkk_1.jpeg",
       "/static/img/dll_1.jpeg",
-      "/static/img/deepak_jimcorbet.jpg",
+      // "/static/img/deepak_jimcorbet.jpg",
         ]
       let boxPicChange = setInterval(function(){
         const time = Date.now()
