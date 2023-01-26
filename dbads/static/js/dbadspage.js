@@ -78,8 +78,8 @@
       const images = [
       "/static/img/ptt_1.png",
       "/static/img/boat_1.jpeg",
-      "/static/img/bkk_1.jpeg",
-      "/static/img/dll_1.jpeg",
+      // "/static/img/bkk_1.jpeg",
+      // "/static/img/dll_1.jpeg",
       // "/static/img/deepak_jimcorbet.jpg",
         ]
       let boxPicChange = setInterval(function(){
