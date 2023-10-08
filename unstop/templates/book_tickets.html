@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book tickets</title>
+</head>
+<body>
+    <h1>Book tickets</h1>
+
+    <form action="{% url 'book_tickets' %}" method="post">
+        {% csrf_token %}
+        <label for="tickets_booked">How many tickets to book: </label>
+        <input id="tickets_booked" type="text" name="tickets_booked" value="{{ tickets_booked }}">
+        
+        <input type="submit" value="Book">
+    </form>
+
+
+    <br>
+
+    <tr>
+        {% if error %}
+        <tr>
+            <td>
+                <span style="color: crimson;">
+                    {{error}}
+                </span>
+            </td>
+        </tr>
+        <br>
+        <br>
+        {% endif %}
+
+        {% if response %}
+            <tr>
+                {{response}}
+            </tr>
+        {% endif %}
+
+        {% if tickets_booked %}
+        <td>
+            Tickets booked: 
+        </td>
+        <td>
+            {{tickets_booked}}
+        </td>
+        <br>
+        <br>
+        {% endif %}
+    </tr>
+    All Seats Status:
+    <br>
+    <tr>
+        <td>
+            Seat Number  -   
+        </td>
+        <td>
+            Seat Status 
+        </td>
+    </tr>
+    <br>
+    <tr>
+        {% for seat in current_seat_status %}
+        <td>
+            {{seat.seat_number}} - 
+        </td>
+        <td>
+            {% if seat.status == 'a' %}
+            <span style="color: green;">
+                {{seat.status}}
+            </span>
+            {% else %}
+            <span style="color: gray;">
+                {{seat.status}}
+            </span>
+            {% endif %}
+        </td>
+
+        <br>
+        {% endfor %}
+    </tr>
+
+    <br>
+    <br>
+    {% if current_seat_status %}
+    <tr>
+        <a style="color: red;" href="{% url 'reset_db' %}"> Reset DB</a>
+    </tr>
+    {% endif %}
+    <br>
+    <br>
+</body>
+</html>

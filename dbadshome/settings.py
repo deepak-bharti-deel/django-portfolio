@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # custom apps
     'dbads',
     'shakti',
+    'unstop',
 ]
 
 MIDDLEWARE = [
