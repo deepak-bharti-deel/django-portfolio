@@ -50,7 +50,16 @@
         <br>
         {% endif %}
     </tr>
-    All Seats Status:
+    Current Status of Seats: <br>
+    <br>
+    <span style="color: green;">
+        a = available seat
+    </span> 
+    <br>
+    <span style="color: red;">
+        b = booked seat
+    </span>
+    <br>
     <br>
     <tr>
         <td>
@@ -72,7 +81,7 @@
                 {{seat.status}}
             </span>
             {% else %}
-            <span style="color: gray;">
+            <span style="color: red;">
                 {{seat.status}}
             </span>
             {% endif %}
